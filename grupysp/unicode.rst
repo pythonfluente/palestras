@@ -24,6 +24,10 @@ Encoding versus decoding
     >>> b.decode('utf8')
 
 
+.. image:: encoding-demo.png
+
+
+
 Tipos binários
 ==============
 
@@ -39,7 +43,7 @@ Tipos ``bytes`` e ``bytearray``
     >>> cafe[:1]
     b'c'
     >>> cafe_arr = bytearray(cafe)
-    >>> cafe_arr  <4>
+    >>> cafe_arr
     bytearray(b'caf\xc3\xa9')
     >>> cafe_arr[-1:]
     bytearray(b'\xa9')
@@ -50,7 +54,7 @@ Construtor alternativo
 ::
 
     >>> bytes.fromhex('31 4B CE A9')
-    b'1K\xce\xa9'    
+    b'1K\xce\xa9'
 
 
 Codecs
@@ -103,24 +107,24 @@ Diagnosticar e resolver erros
 ::
 
     >>> city = 'São Paulo'
-    >>> city.encode('utf_8')  <1>
+    >>> city.encode('utf_8')
     b'S\xc3\xa3o Paulo'
     >>> city.encode('utf_16')
     b'\xff\xfeS\x00\xe3\x00o\x00 \x00P\x00a\x00u\x00l\x00o\x00'
-    >>> city.encode('iso8859_1')  <2>
+    >>> city.encode('iso8859_1')
     b'S\xe3o Paulo'
-    >>> city.encode('cp437')  <3>
+    >>> city.encode('cp437')
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
       File "/.../lib/python3.4/encodings/cp437.py", line 12, in encode
         return codecs.charmap_encode(input,errors,encoding_map)
     UnicodeEncodeError: 'charmap' codec can't encode character '\xe3' in
     position 1: character maps to <undefined>
-    >>> city.encode('cp437', errors='ignore')  <4>
+    >>> city.encode('cp437', errors='ignore')
     b'So Paulo'
-    >>> city.encode('cp437', errors='replace')  <5>
+    >>> city.encode('cp437', errors='replace')
     b'S?o Paulo'
-    >>> city.encode('cp437', errors='xmlcharrefreplace')  <6>
+    >>> city.encode('cp437', errors='xmlcharrefreplace')
     b'S&#227;o Paulo'
 
 
@@ -128,19 +132,19 @@ Diagnosticar e resolver erros
 
 ::
 
-    >>> octets = b'Montr\xe9al'  <1>
-    >>> octets.decode('cp1252')  <2>
+    >>> octets = b'Montr\xe9al'
+    >>> octets.decode('cp1252')
     'Montréal'
-    >>> octets.decode('iso8859_7')  <3>
+    >>> octets.decode('iso8859_7')
     'Montrιal'
-    >>> octets.decode('koi8_r')  <4>
+    >>> octets.decode('koi8_r')
     'MontrИal'
-    >>> octets.decode('utf_8')  <5>
+    >>> octets.decode('utf_8')
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
     UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 5:
     invalid continuation byte
-    >>> octets.decode('utf_8', errors='replace')  <6>
+    >>> octets.decode('utf_8', errors='replace')
     'Montr�al'
 
 
@@ -162,7 +166,11 @@ Diagnosticar e resolver erros
 Detectando encodings: Chardet
 =============================
 
-Pacote ``chardet`` pode ser usado como biblioteca ou utilitário de linha de comando.
+Pacote `chardet`_ (Universal Character Encoding Detector).
+
+.. _chardet: https://pypi.python.org/pypi/chardet
+
+Pode ser usado como biblioteca ou utilitário de linha de comando.
 
 ::
 
@@ -172,6 +180,11 @@ Strings-bytes.asciidoc: utf-8 with confidence 0.99
 
 Arquivos de texto
 =================
+
+Use o sanduíche: recheio 100% Unicode puro!
+
+.. image:: unicode-sandwich.png
+
 
 Não confie nos encodigns default.
 
@@ -188,30 +201,30 @@ Para entender o que se passa
 ::
 
     >>> fp = open('cafe.txt', 'w', encoding='utf_8')
-    >>> fp  <1>
+    >>> fp
     <_io.TextIOWrapper name='cafe.txt' mode='w' encoding='utf_8'>
     >>> fp.write('café')
-    4  <2>
+    4
     >>> fp.close
     >>> import os
     >>> os.stat('cafe.txt').st_size
-    5  <3>
+    5
     >>> fp2 = open('cafe.txt')
-    >>> fp2  <4>
+    >>> fp2
     <_io.TextIOWrapper name='cafe.txt' mode='r' encoding='cp1252'>
-    >>> fp2.encoding  <5>
+    >>> fp2.encoding
     'cp1252'
     >>> fp2.read()
-    'cafÃ©'  <6>
-    >>> fp3 = open('cafe.txt', encoding='utf_8')  <7>
+    'cafÃ©'
+    >>> fp3 = open('cafe.txt', encoding='utf_8')
     >>> fp3
     <_io.TextIOWrapper name='cafe.txt' mode='r' encoding='utf_8'>
     >>> fp3.read()
-    'café'  <8>
-    >>> fp4 = open('cafe.txt', 'rb')  <9>
+    'café'
+    >>> fp4 = open('cafe.txt', 'rb')
     >>> fp4
-    <_io.BufferedReader name='cafe.txt'>  <10>
-    >>> fp4.read()  <11>
+    <_io.BufferedReader name='cafe.txt'>
+    >>> fp4.read()
     b'caf\xc3\xa9'
 
 
@@ -239,14 +252,14 @@ Windows 7, SP1
 
 ::
 
-    Z:\>chcp  <1>
+    Z:\>chcp
     Página de código ativa: 850
-    Z:\>python default_encodings.py  <2>
-     locale.getpreferredencoding() -> 'cp1252'  <3>
+    Z:\>python default_encodings.py
+     locale.getpreferredencoding() -> 'cp1252'
                      type(my_file) -> <class '_io.TextIOWrapper'>
-                  my_file.encoding -> 'cp1252'  <4>
-               sys.stdout.isatty() -> True      <5>
-               sys.stdout.encoding -> 'cp850'   <6>
+                  my_file.encoding -> 'cp1252'
+               sys.stdout.isatty() -> True
+               sys.stdout.encoding -> 'cp850'
                 sys.stdin.isatty() -> True
                 sys.stdin.encoding -> 'cp850'
                sys.stderr.isatty() -> True
