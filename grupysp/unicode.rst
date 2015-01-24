@@ -232,6 +232,10 @@ Para entender o que se passa
 A *zona* dos encodings default
 ==============================
 
+Script para investigação: `default_encodings.py`_
+
+.. default_encodings.py: default_encodings.py
+
 GNU/Linux Ubuntu 14.04, Mac OSX 10.9
 
 ::

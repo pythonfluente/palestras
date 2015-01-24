@@ -21,7 +21,7 @@ Mas queremos gerar HTML customizado para vários tipos de objetos.
 ``str``
     Substituir quebras de linha por ``<br>\n`` e usar ``<p>`` em vez de ``<pre>``.
 
-``int`
+``int``
     Mostrar o número em decimal e hexadecimal.
 
 ``list``
