@@ -3,7 +3,8 @@ Texto versus bytes
 ==================
 
     Humanos usam texto. Computadores falam bytes.
-    *Esther Nam e Travis Fisher* -- `Character encoding and Unicode in Python`_
+
+    *Esther Nam e Travis Fisher* — `Character encoding and Unicode in Python`_
 
 .. _Character encoding and Unicode in Python: http://www.slideshare.net/fischertrav/character-encoding-unicode-how-to-with-dignity-33352863
 
@@ -293,7 +294,9 @@ Ordenação com ``locale.strxfrm``
     ['açaí', 'acerola', 'atemoia', 'cajá', 'caju']
 
 
-Ordenação com ``pyuca``: Unicode Collation Algorithm
+Ordenação com pacote `pyuca`_: Unicode Collation Algorithm
+
+.. _pyuca: https://pypi.python.org/pypi/pyuca/
 
 ::
 
