@@ -8,12 +8,13 @@ Texto versus bytes
 
 .. _Character encoding and Unicode in Python: http://www.slideshare.net/fischertrav/character-encoding-unicode-how-to-with-dignity-33352863
 
+
 Para motivar a discussão
 ========================
 
-Excute o script `codepages_anim.py`_
+Execute o script `codepages_anim.py`_
 
-.. codepages_anim.py: codepages_anim.py
+.. _codepages_anim.py: codepages_anim.py
 
 
 Encoding versus decoding
