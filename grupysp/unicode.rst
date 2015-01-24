@@ -312,7 +312,7 @@ Ordenação com pacote `pyuca`_: Unicode Collation Algorithm
 Outros tópicos abordados no livro
 =================================
 
-Além desses assuntos, o capítulo 4 *Text versus bytes* do `Fluent Python`_ cobre:
+Além desses assuntos, o capítulo 4 *"Text versus bytes"* do `Fluent Python`_ cobre:
 
 * manipulação de bytes com ``array.array``, ``memoryview`` e ``struct``
 * codificações com BOM (byte-order mark)
@@ -322,5 +322,6 @@ Além desses assuntos, o capítulo 4 *Text versus bytes* do `Fluent Python`_ cob
 * identificação de dígitos não-ASCII
 * expressões regulares com ``str`` e ``bytes``
 * funções do módulo ``os`` que aceitam ``str`` ou ``bytes``
+* **muitas** referências: vídeos, blogs, slides, livros, padrões oficiais...
 
 .. _Fluent Python: http://shop.oreilly.com/product/0636920032519.do
