@@ -11,4 +11,6 @@ Palestras
 
 - `GruPy-SP`_: Grupo de Usuários de Python — São Paulo, 24/jan/2015
 
+.. _GruPy-SP: grupy/README.rst
+
 .. image:: rc_lrg-2014-10-04.jpg
