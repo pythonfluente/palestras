@@ -18,9 +18,12 @@ Dica: domine a função ``format`` antes de estudar o método ``str.format``.
     '1 BRL = 0.41 USD'
 
 
-Códigos de formatação são vinculados a tipos específicos de objetos. Mesmo tipos embutidos simples como ``int`` e ``float`` tem seus códigos específicos.
+Códigos de formatação são vinculados a tipos específicos de objetos.
+Mesmo tipos embutidos simples como ``int`` e ``float`` tem seus códigos
+específicos.
 
 ::
+
     >>> format(42, 'b')
     '101010'
     >>> format(2/3, '.1%')
@@ -83,7 +86,7 @@ Implementação do ``__format__`` em ``vector2d_v2.py``.
             components = (format(c, fmt_spec) for c in self)
             return '({}, {})'.format(*components)
 
-Implementação de coordenadas polares.
+Formato de coordenadas polares.
 
 ::
 
@@ -93,6 +96,9 @@ Implementação de coordenadas polares.
     '<1.414e+00, 7.854e-01>'
     >>> format(Vector2d(1, 1), '0.5fp')
     '<1.41421, 0.78540>'
+
+
+Implementação do formato de coordenadas polares.
 
 ::
 
@@ -110,3 +116,7 @@ Implementação de coordenadas polares.
                 outer_fmt = '({}, {})'
             components = (format(c, fmt_spec) for c in coords)
             return outer_fmt.format(*components)
+
+Módulo completo: `vector2d_v2.py`_
+
+.. _vector2d_v2.py: vector2d_v2.py
