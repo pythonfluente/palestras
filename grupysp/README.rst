@@ -7,13 +7,16 @@ Tópicos
 
 - mistérios do `Unicode`_ esclarecidos, inclusive no Windows!
 
-- porque tuplas são imutáveis mas podem ter seu valor mudado?!?
+- porque `tuplas`_ são imutáveis mas podem ter seu valor mudado?!?
 
-- extensão do ``format`` com códigos customizados
+- extensão do `format`_ com códigos customizados
 
-- decorador ``@singledispatch``: um novo paradigma
+- decorador `@singledispatch`_: um novo paradigma
 
 .. _Unicode: unicode.rst
+.. _tuplas: https://github.com/fluentpython/orablog/blob/master/changing-tuples.rst
+.. _format: format.rst
+.. _@singledispatch: singledispatch.rst
 
 Sobre o livro
 =============
@@ -38,4 +41,4 @@ Sobre o livro
 
 .. _Python.pro.br: http://adm.python.pro.br
 
-..image:: python-general-2014-10-10.png
+.. image:: python-general-2014-10-10.png
