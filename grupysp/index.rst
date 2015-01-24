@@ -4,8 +4,8 @@
    contain the root `toctree` directive.
 
 
-Fluent Python: melhores momentos vol.1's documentation!
-==================================================================
+Fluent Python: melhores momentos (vol.1)
+========================================
 
 Contents:
 
@@ -16,18 +16,3 @@ Contents:
    unicode
    format
    singledispatch
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
-----
-
-Voltar_
-
-.. _Voltar: README.rst
