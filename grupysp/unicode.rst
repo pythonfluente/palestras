@@ -175,8 +175,8 @@ Pode ser usado como biblioteca ou utilitário de linha de comando.
 
 ::
 
-$ chardetect Strings-bytes.asciidoc
-Strings-bytes.asciidoc: utf-8 with confidence 0.99
+    $ chardetect Strings-bytes.asciidoc
+    Strings-bytes.asciidoc: utf-8 with confidence 0.99
 
 
 Arquivos de texto
@@ -234,7 +234,7 @@ A *zona* dos encodings default
 
 Script para investigação: `default_encodings.py`_
 
-.. default_encodings.py: default_encodings.py
+.. _default_encodings.py: default_encodings.py
 
 GNU/Linux Ubuntu 14.04, Mac OSX 10.9
 
@@ -329,3 +329,9 @@ Além desses assuntos, o capítulo 4 *"Text versus bytes"* do `Fluent Python`_ c
 * **muitas** referências: vídeos, blogs, slides, livros, padrões oficiais...
 
 .. _Fluent Python: http://shop.oreilly.com/product/0636920032519.do
+
+----
+
+Voltar_
+
+.. _Voltar: README.rst

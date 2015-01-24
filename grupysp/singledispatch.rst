@@ -47,3 +47,9 @@ Mas queremos gerar HTML customizado para vários tipos de objetos.
 A solução mais flexível do que sobrecarga de métodos é uma função genérica: `generic.py`_.
 
 .. _generic.py: generic.py
+
+----
+
+Voltar_
+
+.. _Voltar: README.rst
